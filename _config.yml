@@ -1,0 +1,5 @@
+theme: jekyll-theme-midnight
+markdown: kramdown
+collections:
+  trials:
+    output: true
