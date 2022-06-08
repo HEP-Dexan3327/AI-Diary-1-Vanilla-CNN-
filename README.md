@@ -1,5 +1,5 @@
 {% assign sorted = site.trials | sort: 'errorrate' %}
-{% for trial in site.trials %}
+{% for trial in sorted %}
   <ul>
     <li>@{{ trial.name }} ({{ trial.datetime }}) [{ trial.errorrate }]</li>
     <ul>
