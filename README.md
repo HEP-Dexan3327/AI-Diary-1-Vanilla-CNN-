@@ -1,10 +1,10 @@
 {% assign trials = site.trials | group_by: 'dataset' %}
 {% for group in trials %}
-  <h1>HI</h1>
+  <h1>{{ group.dataset }}</h1>
   {% assign sorted = group.items | sort: 'errorrate' | reverse %}
   {% for trial in sorted  %}
    <ul>
-    <li>{{ trial.name }} <span style="color:cyan;">({{ trial.datetime }})</span> [ Accuracy: {{ trial.errorrate }}]</li>
+    <li>{{ trial.name }} <span style="color:orange;">({{ trial.datetime }})</span> [ Accuracy: {{ trial.errorrate }}]</li>
     <ul>
       <li><img src="models/{{ trial.img }}" alt="Model Structure: ">{{ trial.content | markdownify }}</li>
     </ul>
