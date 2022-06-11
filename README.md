@@ -1,5 +1,5 @@
 {% assign trials = site.trials | group_by: 'dataset' %}
-{% for group in trials %}
+{% for group in trials reverse %}
   <h1>{{ group.name }}</h1>
   {% assign sorted = group.items | sort: 'errorrate' | reverse %}
   {% for trial in sorted  %}
