@@ -1,0 +1,7 @@
+---
+name: ResNet 34
+datetime: 202207301038
+img: 202207301038_loss.png
+errorrate: 0.850
+dataset: CIFAR10
+---
